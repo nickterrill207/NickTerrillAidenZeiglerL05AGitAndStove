@@ -1,5 +1,5 @@
 public class Burner {
-    private enum Temperature {BLAZING, HOT, WARM, COOL};
+    public enum Temperature {BLAZING, HOT, WARM, COOL};
     private Temperature myTemperature;
     private Setting mySetting;
     private int timer;
@@ -10,6 +10,10 @@ public class Burner {
         myTemperature = Temperature.COOL;
         mySetting = Setting.OFF;
         timer = 0;
+    }
+
+    public Temperature getTemperature() {
+        return myTemperature;
     }
 
     public void plusButton() {
@@ -67,16 +71,16 @@ public class Burner {
     public void display() {
         switch (mySetting) {
             case OFF:
-                System.out.println(mySetting + ".....cooool");
+                System.out.println("[" + mySetting + "].....cooool");
                 break;
             case LOW:
-                System.out.println(mySetting + ".....warm");
+                System.out.println("[" + mySetting + "].....warm");
                 break;
             case MEDIUM:
-                System.out.println(mySetting + ".....CAREFUL");
+                System.out.println("[" + mySetting + "].....CAREFUL");
                 break;
             case HIGH:
-                System.out.println(mySetting + ".....VERY HOT! DON'T TOUCH");
+                System.out.println("[" + mySetting + "].....VERY HOT! DON'T TOUCH");
                 break;
         }
     }
