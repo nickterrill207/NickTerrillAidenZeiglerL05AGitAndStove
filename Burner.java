@@ -1,3 +1,13 @@
+/**
+* Burner Class
+*
+* @author Nick Terrill
+* @author Aiden Zeigler
+*
+* Purpose: Creates the Burner class, 
+* which has variables to hold it's temperature, setting, and timer.
+*/
+
 public class Burner {
     public enum Temperature {BLAZING, HOT, WARM, COOL};
     private Temperature myTemperature;
@@ -16,6 +26,7 @@ public class Burner {
         return myTemperature;
     }
 
+    // Changes the burner's setting up one
     public void plusButton() {
         switch (mySetting) {
             case OFF:
@@ -28,15 +39,16 @@ public class Burner {
                 mySetting = Setting.HIGH;
                 break;
             case HIGH:
-                break;
+                break; // No setting higher
         }
         timer = TIME_DURATION;
     }
 
+    // Changes the burner's setting down one
     public void minusButton() {
         switch (mySetting) {
             case OFF:
-                break;
+                break; // No setting lower
             case LOW:
                 mySetting = Setting.OFF;
                 break;
@@ -50,6 +62,7 @@ public class Burner {
         timer = TIME_DURATION;
     }
 
+    // Updates the burner's temperature, based on it's setting
     public void updateTemperature() {
         switch (mySetting) {
             case OFF:
@@ -68,6 +81,7 @@ public class Burner {
         timer++;
     }
 
+    // Displays the burner's setting along with it's temperature
     public void display() {
         switch (mySetting) {
             case OFF:

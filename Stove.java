@@ -3,8 +3,8 @@ import java.util.ArrayList;
 /**
  * Stove class. 
  *  
- * @author Mark Baldwin
- * @author Cyndi Rader
+ * @author Nick Terrill
+ * @author Aiden Zeigler
  * 
  * Purpose: Simulates a stove
  */
@@ -26,8 +26,6 @@ public class Stove {
 	
 	/**
 	 * Display the current stove status
-	 *  
-	 **** You must write the following method ****
 	 */
 	public void displayStove() {
 		boolean anyBlazing = false;
